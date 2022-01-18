@@ -7,5 +7,14 @@
 - Connect my GitHub repo to my local repo using the directions on GitHub.
 
 
+
+<p>&nbsp;</p>
+
+## Paired with Shane to create this wireframe below: 
+
+![image](image.png)
+
+<p>&nbsp;</p>
+
 ## Site Deployment  Link
 - [https://hambalieucityexplorer.netlify.app/](https://hambalieucityexplorer.netlify.app/)
