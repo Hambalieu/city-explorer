@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# City Explorer 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Author**: Hambalieu Jallow
 
-## Available Scripts
+# Overview:
+- Building a React application that uses the Axios library to make user-initiated requests for data from a thrid-party API.
+- Given that a user enters a valid location in the input.
+When the user clicks the "Explore!" button.
+Then the latitude and longitude will be displayed on the page
+- Given that a user enters a valid location in the input.
+When the user clicks the "Explore!" butto.
+Then the map of the city is displayed on the page.
+- Given that a user does not enter a valid location (eg: empty string) in the input
+When the user clicks the "Explore!" button
+Then the user will receive an error message on the page and the data will not be rendered properly
 
-In the project directory, you can run:
+<p>&nbsp;</p>
+## Feature 1 and Steps
 
-### `npm start`
+- Created a new repo called `city-explorer` on GitHub, initialized with no files.
+- Use `create-react-app` to setup a new React application named `city-explorer` in your local projects directory. 
+- Connect my GitHub repo to my local repo using the directions on GitHub.
+- Add a `.gitignore` file with React configurations, including ignoring of `.env`.
+- Create a `package.json` file with all dependencies and any associated details related to configuration. The dependencies needed for today's lab include: Axios and Bootstrap.
+- Procure a LocationIQ free-tier account. From the Dashboard, navigate to your API Access Tokens page. View, then Update the existing token, to change the label to "City Explorer".
+- MOST IMPORTANTLY: Add your deployed Netlify app url as an HTTP Referrer to your API token settings. This step is necessary to prevent any unauthorized use of your token. Also add `localhost` while testing from your development environment.
+- Create an `.env` file: Your API key goes here for local development. Make sure this file is in your `.gitignore`.
+- Build a form to collect a city name from the user. Give the submit button the text of "Explore!".
+- Use the data from the form to query LocationIQ for the latitude and longitude of the requested city. 
+- Update the page with the returned `display_name`, `latitude`, and `longitude`, displayed nicely in an appropriate Bootstrap component. 
+- After latitude and longitude values are retrieved, use those values to craft the URL for a map image. 
+- Display the map image using appropriate Bootstrap components.
+- Create an appropriate Bootstrap component that only renders if you hit an error with any API call.
+- When an error occurs, display the status code and an error message to the user.
+- Deploy my updated React app to Netlify by committing and pushing my code to my open pull request on GitHub. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>&nbsp;</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+>REACT_APP_LOCATIONIQ_ACCESS_TOKEN=<location of key access token>
 
-### `npm test`
+## Paired with Shane to create this WRRC Images below: 
+![image](image.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p>&nbsp;</p>
 
-### `npm run build`
+## Collaborators
+- Riva and Shane looked at my PR and suggested some changes that I needed to make on my App.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![image](image.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>&nbsp;</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Site Deployment  Link
+- [https://hambalieucityexplorer.netlify.app/](https://hambalieucityexplorer.netlify.app/)
