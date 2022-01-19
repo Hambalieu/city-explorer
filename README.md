@@ -46,7 +46,7 @@ Then the user will receive an error message on the page and the data will not be
 ## Collaborators
 - Riva and Shane looked at my PR and suggested some changes that I needed to make on my App.
 
-![image](image.png)
+
 
 <p>&nbsp;</p>
 
