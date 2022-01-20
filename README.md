@@ -45,10 +45,13 @@ Then the user will receive an error message on the page and the data will not be
 
 ## Collaborators
 - Riva and Shane looked at my PR and suggested some changes that I needed to make on my App.
-
+- I collaborated with kevin and chuck to get the weather info to render on the App;
 
 
 <p>&nbsp;</p>
 
 ## Site Deployment  Link
 - [https://hambalieucityexplorer.netlify.app/](https://hambalieucityexplorer.netlify.app/)
+
+
+-  [https://trello.com/b/oKobI6sh/city-explorer](https://trello.com/b/oKobI6sh/city-explorer)
