@@ -38,7 +38,8 @@ Then the user will receive an error message on the page and the data will not be
 
 >REACT_APP_LOCATIONIQ_ACCESS_TOKEN=<location of key access token>
 
-## Paired with Shane to create this WRRC Images below: 
+## Paired with Shane to create this WRRC Images below:
+<br></br> 
 ![image](image.png)
 
 <p>&nbsp;</p>
