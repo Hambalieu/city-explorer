@@ -1,7 +1,7 @@
 # City Explorer 
 
 **Author**: Hambalieu Jallow
-
+<br><b/r>
 # Overview:
 - Building a React application that uses the Axios library to make user-initiated requests for data from a thrid-party API.
 - Given that a user enters a valid location in the input.
@@ -38,7 +38,8 @@ Then the user will receive an error message on the page and the data will not be
 
 >REACT_APP_LOCATIONIQ_ACCESS_TOKEN=<location of key access token>
 
-## Paired with Shane to create this WRRC Images below: 
+## Paired with Shane to create this WRRC Images below:
+<br></br> 
 ![image](image.png)
 
 <p>&nbsp;</p>
