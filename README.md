@@ -1,7 +1,7 @@
 # City Explorer 
 
 **Author**: Hambalieu Jallow
-
+<br><b/r>
 # Overview:
 - Building a React application that uses the Axios library to make user-initiated requests for data from a thrid-party API.
 - Given that a user enters a valid location in the input.

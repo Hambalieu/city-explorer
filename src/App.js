@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import  {Card, ListGroup }from 'react-bootstrap/';
 import './App.css';
-import Weather from './Weather.js';
+// import Weather from './Weather.js';
 
 class App extends React.Component {
   constructor(props) {
