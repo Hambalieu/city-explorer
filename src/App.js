@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import { Card, ListGroup } from 'react-bootstrap';
-
+import Card from 'react-bootstrap/Card';
+import Weather from './Weather.js';
+import Movies from './Movies.js';
 
 import './App.css';
 
@@ -21,8 +22,8 @@ class App extends React.Component {
     }
   }
 
+
   handleInput = e => this.setState({ searchQuery: e.target.value });
-  
 
   getCityInfo = async (e) => {
     e.preventDefault();
@@ -43,52 +44,47 @@ class App extends React.Component {
     }
     this.getWeatherInfo();
     this.getMoviesInfo();
+
   }
 
   getWeatherInfo = async () => {
-    let url = `${process.env.REACT_APP_SERVER_URL}/weather?lat=${Math.round(this.state.cityData.lat)}&lon=${Math.round(this.state.cityData.lon)}`;
-    let weatherResults = await axios.get(url);
-    this.setState({
-      weatherData: weatherResults.data,
-      showWeatherData: true
-    })
+
+    try {
+      let url = `${process.env.REACT_APP_SERVER_URL}/weather?lat=${Math.round(this.state.cityData.lat)}&lon=${Math.round(this.state.cityData.lon)}`;
+      let weatherResults = await axios.get(url);
+      this.setState({
+        weatherData: weatherResults.data,
+        showWeatherData: true,
+        renderError: false
+      })
+    } catch (error) {
+      this.setState({
+        renderError: true,
+        errorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`
+      })
+    }
 
   }
 
   getMoviesInfo = async () => {
-    let url = `${process.env.REACT_APP_SERVER_URL}/movies?&location=${this.state.searchQuery}`;
-    let movieResults = await axios.get(url);
-    this.setState({
-      movieData: movieResults.data,
-      showMovieData: true
-
-    })
-
+    try {
+      let url = `${process.env.REACT_APP_SERVER_URL}/movies?&location=${this.state.searchQuery}`;
+      let movieResults = await axios.get(url);
+      this.setState({
+        movieData: movieResults.data,
+        showMovieData: true,
+        renderError: false
+      })
+    } catch (error) {
+      this.setState({
+        renderError: true,
+        errorMessage: `Error Occured: ${error.response.status}, ${error.response.data.error}`
+      })
+    }
 
   }
 
-
-
   render() {
-    let weatherToRender = this.state.weatherData.map((day, idx) =>
-      <ListGroup.Item key={idx}>
-        Date: {day.date}, High: {day.maxTemp}, Low: {day.lowTemp},{day.description}
-      </ListGroup.Item>
-    )
-
-    let moviesToRender = this.state.movieData.map((movie, idx) =>
-      <ListGroup.Item key={idx}>
-        <Card>
-          <Card.Img
-            src ={movie.image_url}
-            alt ={movie.overview}>
-          </Card.Img>
-          <Card.Text>{movie.overview}</Card.Text>
-        </Card>
-      </ListGroup.Item>
-    
-    )
-
     return (
       <>
         <header>
@@ -122,23 +118,19 @@ class App extends React.Component {
                 </Card.Footer>
 
               </Card>
+              <Weather
+                getWeatherInfo={this.getWeatherInfo}
+                weatherData={this.state.weatherData}
+                showWeatherData={this.state.showWeatherData}
+
+              />
+              <Movies
+                cityData={this.state.cityData}
+                movieData={this.state.movieData}
+                showMovieData={this.state.showMovieData}
+                getMovieInfo={this.getMoviesInfo}
+              />
             </article>}
-            <article>
-              {
-                this.state.showWeatherData &&
-                <ListGroup>
-                  {weatherToRender}
-                </ListGroup>
-              }
-            </article>
-            <article>
-              {
-                this.state.showMovieData &&
-                <ListGroup>
-                  {moviesToRender}
-                </ListGroup>
-              }
-            </article>
         </main>
       </>
     );
