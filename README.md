@@ -47,3 +47,14 @@
 
 ## Site Deployment  Link>
 -  [https://trello.com/b/oKobI6sh/city-explorer](https://trello.com/b/oKobI6sh/city-explorer)
+
+
+## TimeStamp:
+Name of feature: finish build React APP FOR CITY Explorer lab 9
+
+Estimate of time needed to complete: 2___
+
+Start time: 9:30_
+
+Finish time: 11:30_
+Actual time needed to complete: _1:30
