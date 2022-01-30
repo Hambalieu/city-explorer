@@ -23,11 +23,21 @@
 
 <p>&nbsp;</p>
 
->REACT_APP_LOCATIONIQ_ACCESS_TOKEN=<location of key access token>
+## lab 10 
+- Performance: As a user, I want the application to work with recent results, so that I can see info without the app doing unnecessary API calls.<br></br>
+
+- All the work I did for lab 10 was done on my city explorer-api (backend).<br></br>
+
+>REACT_APP_LOCATIONIQ_ACCESS_TOKEN=<location of key access token><br></br>
+
+REACT_APP_SERVER_URL=<route key goe here><br></br>
+
+
 
 ## Paired with Shane to create this WRRC Images below:
 <br></br> 
-![im](image.png)
+
+![image](image.png)
 
 ![image](wrrrc.png)
 ![image](wrrcweather.png)
@@ -36,9 +46,6 @@
 
 
 <p>&nbsp;</p>
-
-## Collaborators
-- Riva looked at my PR and suggested some changes that I needed to make on my App.
 
 <p>&nbsp;</p>
 
